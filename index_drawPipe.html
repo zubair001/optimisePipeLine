@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Zenesis MEP calculation solution</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="robots" content="noindex" />
+	<script type="text/javascript" src = "ReadJsDrawPipe.js"></script>
+	<script type="text/javascript" src = "RoomContour.js"></script>	
+	<script type="text/javascript" src = "Pipesystem.js"></script>
+	<script type="text/javascript" src = "MathFunctions.js"></script>
+	
+	<script>
+		var testData = 1;
+
+		function updateTestData(){
+			testData = document.getElementById("DrawingSelector").value;
+		}
+	</script>
+
+</head>
+<body>
+
+
+	<div class="toolbar">
+		<select name="DrawingSelector" id="DrawingSelector" onclick = "updateTestData()">
+			<option value= 1 selected> 1 </option>
+			<option value= 2 selected> 2 </option>
+			<option value= 3 selected> 3 </option>
+			<option value= 4 selected> 4 </option>
+			<option value= 5 selected> 5 </option>
+			<option value= 6 selected> 6 </option>
+		</select>
+		<input type="button" value="Show Drawing" onclick="ReadJSDrawonCanvas(testData);" /> <br><br>
+	</div>
+	
+	<canvas id="myCanvas" width="1200px" height="1000px" style="border:1px solid #d3d3d3;">
+	</canvas>
+
+</body>
+</html>
